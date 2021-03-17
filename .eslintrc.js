@@ -7,5 +7,8 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 12
   },
-  rules: {}
+  rules: {
+    'max-len': ['error', { code: 80, ignoreUrls: true }],
+    'comma-dangle': ['error', 'never']
+  }
 }

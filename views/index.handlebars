@@ -1,6 +1,22 @@
 <!-- restaurant list -->
-<div class="container mt-5">
-  <div class="row">
-    
+<div class="container py-3 content rounded">
+  <ul class="row">
+    {{#each taskList}}
+    <li class="col-12 col-md-4">
+      <div class="taskImg"><img src="{{lookup ../taskListImgs @key }}" alt="" /></div>
+      <div class="form-check my-3 text-center">
+        <input class="form-check-input" type="radio" name="profession" id="{{@key}}" value="{{@key}}" />
+        <label class="form-check-label" for="{{@key}}"> {{@key}} </label>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+  <div class="trashTalk row">
+    <div class="col-12 col-md-2 mb-3">
+      <button type="button" class="btn btn-info">產生幹話</button>
+    </div>
+    <div class="talkArea col-12 col-md-10">
+    <textarea  id="" placeholder="尚未產生幹話"></textarea>
+    </div>
   </div>
 </div>
