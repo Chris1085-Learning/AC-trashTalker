@@ -2,7 +2,7 @@
 
 利用 Express.js、Bootstrap、Handlebars 所製作的網站，在這份專案中會了解到如何設定路由、製作 Handlebars Controllers樣板系統、Get, Post 方式顯示動態資料及Handlebars 的迴圈應用等技巧。
 
-![trashTalker](https://github.com/chris1085/AC-trashTalker/blob/main/trashTalker.png)
+![trashTalker](https://github.com/chris1085/AC-trashTalker/blob/main/trashTalker.jpg)
 
 ## Installation
 
