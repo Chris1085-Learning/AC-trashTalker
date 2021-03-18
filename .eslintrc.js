@@ -8,7 +8,10 @@ module.exports = {
     ecmaVersion: 12
   },
   rules: {
-    'max-len': ['error', { code: 80, ignoreUrls: true }],
-    'comma-dangle': ['error', 'never']
+    'max-len': ['error', { code: 120, ignoreUrls: true }],
+    'comma-dangle': ['error', 'never'],
+    prettier: {
+      'space-before-function-paren': ['error', 'never']
+    }
   }
 }

@@ -1,22 +1,33 @@
-<!-- restaurant list -->
+<!-- trashTalk generator -->
 <div class="container py-3 content rounded">
-  <ul class="row">
-    {{#each taskList}}
-    <li class="col-12 col-md-4">
-      <div class="taskImg"><img src="{{lookup ../taskListImgs @key }}" alt="" /></div>
-      <div class="form-check my-3 text-center">
-        <input class="form-check-input" type="radio" name="profession" id="{{@key}}" value="{{@key}}" />
-        <label class="form-check-label" for="{{@key}}"> {{@key}} </label>
+  <form action="/" method="post">
+    <ul class="row form-group">
+      {{!-- @key as profession in foreach taskList json loop--}}
+      {{#each taskList}}
+      <li class="col-12 col-md-4">
+        <div class="taskImg">
+          <img src="{{lookup ../taskListImgs @key }}" alt="" />
+        </div>
+        <div class="form-check my-3 text-center">
+          <input class="form-check-input" type="radio" name="profession" id="{{@key}}" value="{{@key}}" />
+          <label class="form-check-label" for="{{@key}}"> {{@key}} </label>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+
+    <div class="trashTalk row">
+      <div class="col-12 col-md-2 mb-3">
+        <button type="submit" class="btn btn-info" onclick="">產生幹話</button>
       </div>
-    </li>
-    {{/each}}
-  </ul>
-  <div class="trashTalk row">
-    <div class="col-12 col-md-2 mb-3">
-      <button type="button" class="btn btn-info">產生幹話</button>
+      <div class="talkArea col-12 col-md-10">
+        <textarea id="" placeholder="幹話集中地">{{ generatedStr }}</textarea>
+      </div>
     </div>
-    <div class="talkArea col-12 col-md-10">
-    <textarea  id="" placeholder="尚未產生幹話"></textarea>
-    </div>
-  </div>
+  </form>
+
+  {{!-- show alert whether GeneratedStr is empty or not--}}
+  {{#unless isGeneratedStr}}
+  <div class="alert alert-danger mt-3" role="alert">尚未選取職業</div>
+  {{/unless}}
 </div>
