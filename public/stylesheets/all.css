@@ -17,12 +17,15 @@ header {
 
 .content {
   background-color: gainsboro;
-  /* height: 50vh; */
 }
 
 .taskImg {
-  height: 300px;
   border: 1px solid gray;
+  cursor: pointer;
+}
+
+.labelImg {
+  height: 300px;
 }
 
 img {
